@@ -51,8 +51,8 @@ body {
 }
 
 #daniel-quote {
-    position: relative;
     z-index: 2;
+    position: relative;
 }
 
 #testimonial-2 {
