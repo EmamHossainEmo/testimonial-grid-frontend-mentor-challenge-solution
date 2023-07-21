@@ -50,6 +50,10 @@ body {
     z-index: 1;
 }
 
+#daniel-quote {
+    z-index: 2;
+}
+
 #testimonial-2 {
     background-color: rgb(72, 85, 106);
     color: #ffffff
