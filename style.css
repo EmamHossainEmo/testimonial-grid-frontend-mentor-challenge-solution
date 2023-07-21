@@ -51,6 +51,7 @@ body {
 }
 
 #daniel-quote {
+    position: relative;
     z-index: 2;
 }
 
