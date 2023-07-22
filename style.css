@@ -50,9 +50,9 @@ body {
     z-index: 1;
 }
 
-#testimonial-1 #daniel-quote {
-    z-index: 2;
+#daniel-quote {
     position: relative;
+    z-index: 2;
 }
 
 #testimonial-2 {
