@@ -1,0 +1,189 @@
+/*
+=====================================================
+GENERAL CSS
+=====================================================
+*/
+
+html {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding: 20px;
+  min-height: 100vh;
+  background-color: #cfcfcf;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/*
+=====================================================
+SHARED STYLES
+=====================================================
+*/
+
+header,
+h1 {
+  display: none;
+}
+
+h2 {
+  font-size: 1.4em;
+  font-weight: 600;
+}
+
+p {
+  font-size: 1em;
+}
+
+/*
+=====================================================
+MAIN STYLES
+=====================================================
+*/
+
+main {
+  margin: 20px 0;
+  max-width: 1100px;
+
+  display: grid;
+  gap: 20px;
+}
+
+article {
+  border-radius: 5px;
+  box-shadow: 30px 30px 10px #00000005;
+}
+
+article:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  transition: 0.5s;
+}
+
+article > * {
+  margin: 20px 30px;
+}
+
+.personal-info {
+  display: flex;
+  font-size: 11px;
+}
+
+.personal-info-img {
+  margin-right: 10px;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+}
+
+#article-1 h2,
+#article-2 h2,
+#article-4 h2 {
+  color: #fff;
+}
+
+#article-3 h2,
+#article-5 h2 {
+  color: #48556a;
+}
+
+#article-1 p,
+#article-2 p,
+#article-4 p {
+  color: #ffffff88;
+}
+
+#article-3 p,
+#article-5 p {
+  color: #48556a88;
+}
+
+#article-1 {
+  background-color: #7541c8;
+  background-image: url(images/bg-pattern-quotation.svg);
+  background-repeat: no-repeat;
+  background-position: 75% 0;
+}
+
+#article-2 {
+  background-color: #48556a;
+}
+
+#article-3,
+#article-5 {
+  background-color: #ffffffdd;
+}
+
+#article-4 {
+  background-color: #19212e;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/*
+=====================================================
+BREAKPOINTS
+=====================================================
+*/
+
+@media (min-width: 768px) {
+  main {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas:
+      "alias-1 alias-1 alias-2"
+      "alias-3 alias-4 alias-4"
+      "alias-5 alias-5 alias-5";
+  }
+
+  #article-1 {
+    grid-area: alias-1;
+  }
+
+  #article-2 {
+    grid-area: alias-2;
+  }
+
+  #article-3 {
+    grid-area: alias-3;
+  }
+
+  #article-4 {
+    grid-area: alias-4;
+  }
+
+  #article-5 {
+    grid-area: alias-5;
+  }
+}
+
+@media (min-width: 992px) {
+  main {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+      "alias-1 alias-1 alias-2 alias-5"
+      "alias-3 alias-4 alias-4 alias-5";
+  }
+}
